@@ -36,10 +36,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\QuitApp.cs" />
      <Compile Include="Assets\Movement.cs" />
      <Compile Include="Assets\CollisionHandler.cs" />
      <Compile Include="Assets\ObstacleMovement.cs" />
-     <Compile Include="Assets\QuitApp.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -733,8 +733,14 @@
     <Reference Include="Unity.EditorCoroutines.Editor">
         <HintPath>C:\Users\Aleksa\Desktop\Unity Projects\Rocket Game\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+        <HintPath>C:\Users\Aleksa\Desktop\Unity Projects\Rocket Game\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Services.Core.Analytics">
         <HintPath>C:\Users\Aleksa\Desktop\Unity Projects\Rocket Game\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+        <HintPath>C:\Users\Aleksa\Desktop\Unity Projects\Rocket Game\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
         <HintPath>C:\Users\Aleksa\Desktop\Unity Projects\Rocket Game\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
@@ -750,12 +756,6 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
         <HintPath>C:\Users\Aleksa\Desktop\Unity Projects\Rocket Game\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-        <HintPath>C:\Users\Aleksa\Desktop\Unity Projects\Rocket Game\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-        <HintPath>C:\Users\Aleksa\Desktop\Unity Projects\Rocket Game\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
