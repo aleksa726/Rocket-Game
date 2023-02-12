@@ -36,10 +36,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\QuitApp.cs" />
-     <Compile Include="Assets\Movement.cs" />
-     <Compile Include="Assets\CollisionHandler.cs" />
-     <Compile Include="Assets\ObstacleMovement.cs" />
+     <Compile Include="Assets\Scripts\QuitApp.cs" />
+     <Compile Include="Assets\Scripts\Movement.cs" />
+     <Compile Include="Assets\Scripts\CollisionHandler.cs" />
+     <Compile Include="Assets\Scripts\ObstacleMovement.cs" />
+     <None Include="Assets\Fire System\Procedural fire\Shaders\FireSphere.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
