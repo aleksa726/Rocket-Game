@@ -30,38 +30,31 @@ public class Movement : MonoBehaviour
 
     void Inputs()
     {
+        ThrustLogic();
+        RotationLogic();
+    }
 
+    private void ThrustLogic()
+    {
         if (Input.GetKey(KeyCode.W))
         {
-            playerRigidbody.AddRelativeForce(Vector3.up * force * Time.deltaTime);
-
-            if (!audioSource.isPlaying)
-            {
-                audioSource.PlayOneShot(engineSound, 0.4f);
-            }
-
-            if (!mainBooster.isPlaying)
-            {
-                mainBooster.Play();
-            }
+            ThrustStart();
         }
         else
         {
-            audioSource.Stop();
-            mainBooster.Stop();
+            ThrustStop();
         }
+    }
 
+    private void RotationLogic()
+    {
         if (Input.GetKey(KeyCode.A))
         {
-            Rotate(-1);
-            if (!rightBooster.isPlaying)
-                rightBooster.Play();
+            RotateLeft();
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            Rotate(1);
-            if (!leftBooster.isPlaying)
-                leftBooster.Play();
+            RotateRight();
         }
         else
         {
@@ -70,6 +63,40 @@ public class Movement : MonoBehaviour
         }
     }
 
+    private void RotateRight()
+    {
+        Rotate(1);
+        if (!leftBooster.isPlaying)
+            leftBooster.Play();
+    }
+
+    private void RotateLeft()
+    {
+        Rotate(-1);
+        if (!rightBooster.isPlaying)
+            rightBooster.Play();
+    }
+
+    private void ThrustStop()
+    {
+        audioSource.Stop();
+        mainBooster.Stop();
+    }
+
+    private void ThrustStart()
+    {
+        playerRigidbody.AddRelativeForce(Vector3.up * force * Time.deltaTime);
+
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(engineSound, 0.4f);
+        }
+
+        if (!mainBooster.isPlaying)
+        {
+            mainBooster.Play();
+        }
+    }
 
     void Rotate(int direction)
     {
